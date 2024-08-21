@@ -8,7 +8,7 @@ Modal.setAppElement('#root'); // 모달 접근성을 위한 설정
 const SignUp = () => {
     const [formData, setFormData] = useState({
         username: '',
-        nickname: '', // 추가된 상태
+        nickname: '', 
         userId: '',
         password: '',
         passwordConfirm: '',
@@ -44,7 +44,7 @@ const SignUp = () => {
         const newErrors = {};
 
         if (!formData.username) newErrors.username = '이름을 입력해주세요.';
-        if (!formData.nickname) newErrors.nickname = '닉네임을 입력해주세요.'; // 추가된 검증
+        if (!formData.nickname) newErrors.nickname = '닉네임을 입력해주세요.'; 
         if (!formData.userId) newErrors.userId = '아이디를 입력해주세요.';
         if (!formData.password) newErrors.password = '비밀번호를 입력해주세요.';
         if (!formData.passwordConfirm) newErrors.passwordConfirm = '비밀번호 확인을 입력해주세요.';
@@ -73,7 +73,7 @@ const SignUp = () => {
         if (validateForm()) {
             const signupData = {
                 username: formData.username,
-                nickname: formData.nickname, // 추가된 데이터
+                nickname: formData.nickname,
                 userId: formData.userId,
                 password: formData.password,
                 email: formData.email,
@@ -178,7 +178,7 @@ const SignUp = () => {
                 }
             } else {
                 console.error('닉네임 체크 실패:', result.message);
-                setErrors(prevErrors => ({ ...prevErrors, nickname: result.message }));
+                setErrors(prevErrors => ({ ...prevErrors, nickname: result.message }));  
             }
         } catch (error) {
             console.error('닉네임 체크 중 오류 발생:', error);
@@ -201,6 +201,7 @@ const SignUp = () => {
                             value={formData.username} 
                             onChange={handleInputChange}
                             className="SignUp-page__input"
+                            placeholder="이름 입력"
                         />
                     </div>
                     {errors.username && <small className="SignUp-page__error-message">{errors.username}</small>}
@@ -216,6 +217,7 @@ const SignUp = () => {
                             value={formData.nickname} 
                             onChange={handleInputChange}
                             className="SignUp-page__input"
+                            placeholder="닉네임 입력"
                         />
                         <button type="button" className="SignUp-page__input-check-button" onClick={handleNicknameCheck}>중복 확인</button>
                     </div>
@@ -232,6 +234,7 @@ const SignUp = () => {
                             value={formData.userId} 
                             onChange={handleInputChange}
                             className="SignUp-page__input"
+                            placeholder="아이디 입력"
                         />
                         <button type="button" className="SignUp-page__input-check-button" onClick={handleIdCheck}>중복 확인</button>
                     </div>
@@ -247,6 +250,7 @@ const SignUp = () => {
                         value={formData.password} 
                         onChange={handleInputChange}
                         className="SignUp-page__input"
+                        placeholder="비밀번호 입력 (특수문자 포함, 6~15글자)"
                     />
                     {errors.password && <small className="SignUp-page__error-message">{errors.password}</small>}
                 </div>
@@ -260,6 +264,7 @@ const SignUp = () => {
                         value={formData.passwordConfirm} 
                         onChange={handleInputChange}
                         className="SignUp-page__input"
+                        placeholder="비밀번호를 다시 입력해주세요."
                     />
                     {errors.passwordConfirm && <small className="SignUp-page__error-message">{errors.passwordConfirm}</small>}
                 </div>
@@ -274,6 +279,7 @@ const SignUp = () => {
                             value={formData.email} 
                             onChange={handleInputChange}
                             className="SignUp-page__input"
+                            placeholder="이메일 입력"
                         />
                         <button type="button" className="SignUp-page__input-check-button" onClick={handleOpenPopup}>이메일 인증</button>
                     </div>
@@ -289,6 +295,7 @@ const SignUp = () => {
                         value={formData.tel} 
                         onChange={handleInputChange}
                         className="SignUp-page__input"
+                        placeholder="010-XXXX-XXXX"
                     />
                 </div>
 

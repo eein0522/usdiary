@@ -4,14 +4,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* 세로 중앙 정렬 */
-  min-height: 100vh; /* 화면 전체 높이 설정 */
+  justify-content: center; 
+  min-height: 100vh; 
   margin: 0;
 }
 
 .SignUp-page__form-title {
-  text-align: left; /* 제목 왼쪽 정렬 */
-  width: 500px; /* 가로 길이 설정 */
+  text-align: left; 
+  width: 500px; 
   margin-bottom: 20px;
 }
 
@@ -19,12 +19,12 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
-  width: 500px; /* 가로 길이 설정 */
-  text-align: left; /* 폼 내부의 텍스트는 왼쪽 정렬 */
+  width: 500px; 
+  text-align: left; 
 }
 
 .SignUp-page__input-group {
-  margin-bottom: 12px; /* 여백 조정 */
+  margin-bottom: 12px; 
 }
 
 .SignUp-page__label {
@@ -34,7 +34,7 @@
 
 .SignUp-page__input-wrapper {
   display: flex;
-  align-items: center; /* 수직 중앙 정렬 */
+  align-items: center; 
 }
 
 .SignUp-page__input-wrapper input {
@@ -44,54 +44,59 @@
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
-  height: 40px; /* 입력 필드 높이 설정 */
+  height: 40px; 
 }
 
 .SignUp-page__input-wrapper .SignUp-page__input-check-button {
-  background-color: #000; /* 버튼 검정색 배경 */
-  color: white; /* 흰색 글자 */
+  background-color: #000; 
+  color: white; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  padding: 10px; /* 높이 조정 */
+  padding: 10px; 
   font-size: 12px;
   margin-left: 10px;
-  height: 40px; /* 버튼 높이 입력 필드와 동일하게 설정 */
+  height: 40px; 
   box-sizing: border-box;
+  margin-top: -10px;
 }
 
 .SignUp-page__input-check-button:hover {
-  background-color: #333; /* 버튼 hover 스타일 */
+  background-color: #333; 
+}
+
+.SignUp-page__input-wrapper .SignUp-page__input-check-button:last-of-type {
+  margin-top: -10px; 
 }
 
 .SignUp-page__input[type="text"],
 .SignUp-page__input[type="password"],
 .SignUp-page__input[type="email"],
 .SignUp-page__input[type="tel"] {
-  width: 100%; /* 전체 가로 길이 설정 */
+  width: 100%; 
   padding: 10px;
-  margin-bottom: 12px; /* 여백 조정 */
+  margin-bottom: 12px; 
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
-  height: 40px; /* 입력 필드 높이 설정 */
+  height: 40px; 
 }
 
 .SignUp-page__input-small {
-  width: 245px; /* 가로 길이 설정 */
-  height: 40px; /* 높이 설정 */
+  width: 245px; 
+  height: 40px; 
 }
 
 .SignUp-page__date-gender-wrapper {
   display: flex;
-  justify-content: space-between; /* 생일과 성별을 가로로 나란히 배치 */
-  width: 100%; /* 가로 길이 설정 */
+  justify-content: space-between; 
+  width: 100%; 
 }
 
 .SignUp-page__input-date,
 .SignUp-page__input-gender {
-  width: 48%; /* 각 입력창의 너비를 동일하게 설정 */
+  width: 48%; 
 }
 
 .SignUp-page__input-date input,
@@ -103,7 +108,7 @@
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
-  height: 40px; /* 입력 필드 높이 다른 필드와 동일하게 설정 */
+  height: 40px; 
 }
 
 .SignUp-page__submit-button {
@@ -123,10 +128,9 @@
 }
 
 .SignUp-page__input::placeholder {
-  color: #999; /* 연한 회색 텍스트 */
+  color: #999; 
 }
 
-/* 팝업 전체 화면을 덮는 배경 */
 .SignUp-page__popup {
   position: fixed;
   top: 0;
@@ -140,20 +144,18 @@
   z-index: 999;
 }
 
-/* 팝업 창 스타일 */
 .SignUp-page__popup-content {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  width: 380px; /* 팝업 가로 크기 설정 */
-  text-align: center; /* 중앙 정렬 */
+  width: 380px; 
+  text-align: center; 
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center; /* 중앙 정렬 */
+  align-items: center; 
 }
 
-/* 팝업 창 닫기 버튼 */
 .SignUp-page__popup-close {
   position: absolute;
   top: 10px;
@@ -162,16 +164,14 @@
   cursor: pointer;
 }
 
-/* 팝업 제목 스타일 */
 .SignUp-page__popup-title {
   margin-bottom: 20px;
 }
 
-/* 인증 코드 입력 박스 스타일 */
 .SignUp-page__code-inputs {
   display: flex;
-  justify-content: center; /* 중앙 정렬 */
-  width: 100%; /* 전체 너비 설정 */
+  justify-content: center; 
+  width: 100%; 
   margin-bottom: 20px;
 }
 
@@ -182,7 +182,7 @@
   text-align: center;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 0 5px; /* 간격 조정 */
+  margin: 0 5px; 
 }
 
 .SignUp-page__code-submit-button {
@@ -200,35 +200,32 @@
 
 .SignUp-page__error-message {
   color: red;
-  font-size: 12px; /* 작게 설정 */
+  font-size: 12px;
   margin-top: 5px;
 }
 
-/* 생일과 성별을 가로로 나란히 배치 */
 .SignUp-page__date-gender-wrapper {
   display: flex;
-  justify-content: space-between; /* 생일과 성별을 가로로 나란히 배치 */
+  justify-content: space-between;
   width: 100%;
 }
 
 .SignUp-page__input-date,
 .SignUp-page__input-gender {
-  width: 48%; /* 각 입력창의 너비를 동일하게 설정 */
+  width: 48%; 
 }
 
-/* 공통 입력 필드 스타일 */
 .SignUp-page__input {
-  width: 100%; /* 전체 너비 설정 */
+  width: 100%; 
   padding: 10px;
   margin-bottom: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
-  height: 40px; /* 높이 설정 */
+  height: 40px; 
 }
 
-/* 생일과 성별 입력 필드 크기 동일하게 설정 */
 .SignUp-page__input-date input,
 .SignUp-page__input-gender select {
   width: 100%;
